@@ -1,1 +1,8 @@
-﻿// code here
+﻿const ROLES = {
+  STUDENT: "STUDENT",
+  INSTRUCTOR: "INSTRUCTOR",
+  ADMIN: "ADMIN",
+  SUPER_ADMIN: "SUPER_ADMIN",
+};
+
+module.exports = ROLES;
