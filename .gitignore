@@ -1,1 +1,16 @@
 ﻿# code here
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Prisma (safe optional)
+prisma/dev.db
