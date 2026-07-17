@@ -7,6 +7,7 @@ const path = require("path");
 const config = require("./config");
 
 // ─── Route Imports ────────────────────────────────────────────────────────────
+const adminRoutes = require("./api/admin/admin.routes");
 const userRoutes        = require("./api/users/users.routes");
 const courseRoutes      = require("./api/courses/courses.routes");
 const lessonRoutes      = require("./api/lessons/lessons.routes");
@@ -45,7 +46,7 @@ app.get("/health", (req, res) => {
 
 // ─── API Routes ───────────────────────────────────────────────────────────────
 const API = "/api/v1";
-
+app.use(`${API}/admin`, adminRoutes);
 app.use(`${API}/users`,       userRoutes);       // PATCH /users/me/avatar
 app.use(`${API}/courses`,     courseRoutes);     // POST  /courses/:id/thumbnail
                                                  // POST  /courses/:id/resources
